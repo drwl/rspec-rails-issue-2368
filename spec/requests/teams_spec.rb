@@ -16,11 +16,15 @@ RSpec.describe "/teams", type: :request do
   # Team. As you add validations to Team, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+        name: 'Panthers'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        name: 'A'
+    }
   }
 
   describe "GET /index" do
@@ -85,7 +89,9 @@ RSpec.describe "/teams", type: :request do
   describe "PATCH /update" do
     context "with valid parameters" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+            name: 'ValidName'
+        }
       }
 
       it "updates the requested team" do
