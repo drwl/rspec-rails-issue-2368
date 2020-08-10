@@ -17,11 +17,15 @@ module Blorgh
     # Game. As you add validations to Game, be sure to
     # adjust the attributes here as well.
     let(:valid_attributes) {
-      skip("Add a hash of attributes valid for your model")
+      {
+          score: 1
+      }
     }
 
     let(:invalid_attributes) {
-      skip("Add a hash of attributes invalid for your model")
+      {
+          score: 'foo'
+      }
     }
 
     describe "GET /index" do
