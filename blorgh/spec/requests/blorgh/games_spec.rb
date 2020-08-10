@@ -28,6 +28,10 @@ module Blorgh
       }
     }
 
+    before do
+      @routes = Blorgh::Engine.routes
+    end
+
     describe "GET /index" do
       it "renders a successful response" do
         Game.create! valid_attributes
